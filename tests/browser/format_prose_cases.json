@@ -1,0 +1,155 @@
+[
+ {
+  "why": "a he/she tag goes to the speaker before last; bare tags aren't read",
+  "in": "\"Where are you going?\" asked Mom.\n\"Outside,\" Timmy replied.\n\"Don't be long,\" she said.\n\"I won't,\" he answered.",
+  "out": [
+   "[Mom] Where are you going?",
+   "[Timmy] Outside.",
+   "[Mom] Don't be long.",
+   "[Timmy] I won't."
+  ]
+ },
+ {
+  "why": "He or She at the start isn't a name; with no speaker found, the tag is still read",
+  "in": "He said, \"I think it's going to rain.\"",
+  "out": [
+   "[Narrator] He said.",
+   "[Speaker] I think it's going to rain."
+  ]
+ },
+ {
+  "why": "two speakers in one paragraph; a beat sentence names the second",
+  "in": "\"Hurry up,\" said Tom. Anna laughed. \"I'm coming!\" she called.",
+  "out": [
+   "[Tom] Hurry up.",
+   "[Narrator] Anna laughed.",
+   "[Anna] I'm coming!"
+  ]
+ },
+ {
+  "why": "titles stay with the name",
+  "in": "\"Wait!\" shouted Mr. Brown. \"You forgot your hat.\"",
+  "out": [
+   "[Mr. Brown] Wait!",
+   "[Mr. Brown] You forgot your hat."
+  ]
+ },
+ {
+  "why": "a speaker without a name",
+  "in": "\"I know,\" said the old man, \"but I can't help it.\"",
+  "out": [
+   "[Old man] I know.",
+   "[Old man] But I can't help it."
+  ]
+ },
+ {
+  "why": "her mother",
+  "in": "\"Bedtime,\" her mother said.",
+  "out": [
+   "[Mother] Bedtime."
+  ]
+ },
+ {
+  "why": "speech over two paragraphs",
+  "in": "\"This is the first part of a long speech.\n\n\"And this is the second part,\" said Grandpa.",
+  "out": [
+   "[Grandpa] This is the first part of a long speech.",
+   "[Grandpa] And this is the second part."
+  ]
+ },
+ {
+  "why": "a beat before the quote names the speaker",
+  "in": "Aunt Polly frowned. \"Tom Sawyer, come here this minute!\"",
+  "out": [
+   "[Narrator] Aunt Polly frowned.",
+   "[Aunt Polly] Tom Sawyer, come here this minute!"
+  ]
+ },
+ {
+  "why": "more speaking words; narration with more in it is kept whole",
+  "in": "\"Ready?\" Dad whispered.\n\"Ready,\" Sarah murmured, and took his hand.",
+  "out": [
+   "[Dad] Ready?",
+   "[Sarah] Ready.",
+   "[Narrator] Sarah murmured, and took his hand."
+  ]
+ },
+ {
+  "why": "record-like answers become lines",
+  "in": "[Narrator] The sun was shining.\n{\"Speaker\": \"Speaker 3 (Leo)\", \"Text\"：\"Oh! A bird!\"} , {\"Speaker\": \"Narrator\", \"Text\": \"The robin tilted his head.\"} , {\"speaker\": \"Speaker 1 (Lila)\", \"text\": \"He's a bit shy, Leo.\"}",
+  "out": [
+   "[Narrator] The sun was shining.",
+   "[Leo] Oh! A bird!",
+   "[Narrator] The robin tilted his head.",
+   "[Lila] He's a bit shy, Leo."
+  ]
+ },
+ {
+  "why": "record-like answers with curly quotes, a cue and a broken end",
+  "in": "“Speaker”: “Speaker 2 (Ben)”, “Text”: “(gruffly) Don't get too close!”} , {“Speaker”: “Narrator”, “Text”: “Ben was digging.",
+  "out": [
+   "[Ben] (gruffly) Don't get too close!",
+   "[Narrator] Ben was digging."
+  ]
+ },
+ {
+  "why": "plain lines that run into records leave no record marks behind",
+  "in": "[Ben] I'm going to catch some worms.\"} , {\"Speaker\": \"Narrator\", \"Text\": \"A robin landed.\"}",
+  "out": [
+   "[Ben] I'm going to catch some worms.",
+   "[Narrator] A robin landed."
+  ]
+ },
+ {
+  "why": "Speaker N (Name) tags become the name; a cue in the tag moves into the line",
+  "in": "[Speaker 1 (Lila)] (softly) I should find a sunbeam.\n[Ben (gruffly)] Worms first.",
+  "out": [
+   "[Lila] (softly) I should find a sunbeam.",
+   "[Ben] (gruffly) Worms first."
+  ]
+ },
+ {
+  "why": "lone quote marks and a leading colon are dropped",
+  "in": "[Narrator] It's a lovely day for a nap, don’t you think?”.\n[Narrator] “Absolutely perfect.\n[Narrator] ： Oh! A bird!",
+  "out": [
+   "[Narrator] It's a lovely day for a nap, don’t you think?",
+   "[Narrator] Absolutely perfect.",
+   "[Narrator] Oh! A bird!"
+  ]
+ },
+ {
+  "why": "a [Narrator] line gives its quotes to the named speaker; with no name and no conversation, they stay",
+  "in": "[Narrator] \"Run,\" said Rose. \"Now.\"\n[Narrator] \"Hello,\" someone called.",
+  "out": [
+   "[Rose] Run.",
+   "[Rose] Now.",
+   "[Narrator] Hello.",
+   "[Narrator] Someone called."
+  ]
+ },
+ {
+  "why": "an explicit speaker tag still wins",
+  "in": "[Ann] \"Fix it,\" she said.",
+  "out": [
+   "[Ann] Fix it."
+  ]
+ },
+ {
+  "why": "a headline resets the conversation",
+  "in": "\"Hi,\" said Tom.\n\"Hello,\" said Anna.\n# Chapter 2\n\"Morning,\" he said.",
+  "out": [
+   "[Tom] Hi.",
+   "[Anna] Hello.",
+   "# Chapter 2",
+   "[Speaker] Morning.",
+   "[Narrator] He said."
+  ]
+ },
+ {
+  "why": "ordinary narration is left alone",
+  "in": "Then the rain came, and Tom said nothing at all.",
+  "out": [
+   "Then the rain came, and Tom said nothing at all."
+  ]
+ }
+]

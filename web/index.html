@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VoiceCastTTS v2 - Local Multi-Speaker TTS</title>
+  <script src="/static/theme.js"></script>
+  <link rel="stylesheet" href="/static/studio.css">
+</head>
+<body>
+  <svg class="icon-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+    <symbol id="i-import" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></symbol>
+    <symbol id="i-save" viewBox="0 0 24 24"><path d="M5 3h11l5 5v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M7 3v6h8V3"/><path d="M7 21v-7h10v7"/></symbol>
+    <symbol id="i-sparkle" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8z"/><path d="M19 14l.8 2.2L22 17l-2.2.8L19 20l-.8-2.2L16 17l2.2-.8z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7"/><path d="M4 4v5h5"/></symbol>
+    <symbol id="i-refresh" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v5h-5"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="currentColor"/></symbol>
+    <symbol id="i-back10" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.3-5.7"/><path d="M4 4v5h5"/><text x="12.5" y="15.5" text-anchor="middle" font-size="8" font-weight="700" fill="currentColor" stroke="none">10</text></symbol>
+    <symbol id="i-forward10" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.3-5.7"/><path d="M20 4v5h-5"/><text x="11.5" y="15.5" text-anchor="middle" font-size="8" font-weight="700" fill="currentColor" stroke="none">10</text></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><rect x="6" y="5" width="4" height="14" rx="1" fill="currentColor"/><rect x="14" y="5" width="4" height="14" rx="1" fill="currentColor"/></symbol>
+    <symbol id="i-stop" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="2" fill="currentColor"/></symbol>
+    <symbol id="i-compare" viewBox="0 0 24 24"><path d="M4 8h15l-3-3"/><path d="M20 16H5l3 3"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></symbol>
+    <symbol id="i-archive" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="5" rx="1"/><path d="M5 9v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9"/><path d="M10 13h4"/></symbol>
+    <symbol id="i-blend" viewBox="0 0 24 24"><circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/></symbol>
+    <symbol id="i-loop" viewBox="0 0 24 24"><path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/></symbol>
+    <symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16.5 8.5a5 5 0 0 1 0 7"/><path d="M19 6a8.5 8.5 0 0 1 0 12"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3l-5.5 2.9 1-6.2L3 9.6l6.2-.9z"/></symbol>
+    <symbol id="i-star-filled" viewBox="0 0 24 24"><path d="M12 3l2.8 5.7 6.2.9-4.5 4.4 1 6.2L12 17.3l-5.5 2.9 1-6.2L3 9.6l6.2-.9z" fill="currentColor"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20l1-4L16 5l3 3L8 19z"/><path d="M14 7l3 3"/></symbol>
+    <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/><path d="M8 21h8"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12"/><path d="M18 6L6 18"/></symbol>
+  </svg>
+
+  <header class="app-header">
+    <div class="brand">
+      <img src="/logo_128.png" id="brandLogo" alt="" class="brand-logo">
+      <span id="fallbackEmoji" class="brand-fallback hidden" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-mic"></use></svg></span>
+      <div>
+        <h1>VoiceCastTTS v2</h1>
+        <p class="brand-sub">Multi-speaker text to speech · 100% local</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span id="projectName" class="project-name" title="Current project file">Unsaved project</span>
+      <button type="button" class="btn btn-secondary" data-click="openProject" title="Open a saved VoiceCast project (.voicecast.json)"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-folder"></use></svg> Open</button>
+      <button type="button" class="btn btn-secondary" id="importBtn" data-click="openImport" title="Bring in text from a .txt or .md file, or a shared Google Doc"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-import"></use></svg> Import</button>
+      <button type="button" class="btn btn-secondary" data-click="saveProject" data-value="false" title="Save the script, cast, speeds and pacing (Ctrl+S)"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-save"></use></svg> Save</button>
+      <button type="button" class="btn btn-secondary" data-click="saveProject" data-value="true" title="Save the project to a new file (Ctrl+Shift+S)">Save As…</button>
+      <button type="button" class="btn btn-ghost" id="aiToggle" data-click="toggleAiWriter" aria-pressed="false" title="Show the Script Assistant (needs an AI program such as LM Studio)"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sparkle"></use></svg> Assistant</button>
+      <button type="button" class="btn btn-ghost theme-toggle" id="themeToggle" data-click="cycleTheme" title="Switch between automatic, light and dark colors">Theme: Auto</button>
+    </div>
+    <input type="file" id="projectFileInput" class="hidden" accept=".json,application/json" data-change="onProjectFileChosen">
+  </header>
+
+  <main class="workspace">
+    <!-- Zone 1: Script -->
+    <section class="zone zone-script" aria-labelledby="scriptZoneTitle">
+      <div class="zone-head">
+        <h2 id="scriptZoneTitle">Script</h2>
+        <span id="charCount" class="zone-meta">0 words</span>
+      </div>
+
+      <details id="aiPanel" class="ai-panel hidden">
+        <summary><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sparkle"></use></svg> Script Assistant <span class="zone-meta">uses an AI program on this computer</span></summary>
+        <div class="ai-body">
+          <div class="ai-modes" role="group" aria-label="What the AI should do">
+            <button type="button" class="btn btn-secondary btn-sm ai-mode is-active" id="aiModeWrite" data-click="setAiMode" data-value="write" aria-pressed="true">Write new</button>
+            <button type="button" class="btn btn-secondary btn-sm ai-mode" id="aiModeSplit" data-click="setAiMode" data-value="split" aria-pressed="false">Split my text</button>
+            <button type="button" class="btn btn-secondary btn-sm ai-mode" id="aiModeContinue" data-click="setAiMode" data-value="continue" aria-pressed="false">Continue the story</button>
+            <span id="aiLengths" class="ai-lengths" role="group" aria-label="Length">
+              <button type="button" class="btn btn-secondary btn-sm ai-length" data-click="setAiLength" data-value="short" aria-pressed="false">Short</button>
+              <button type="button" class="btn btn-secondary btn-sm ai-length is-active" data-click="setAiLength" data-value="medium" aria-pressed="true">Medium</button>
+              <button type="button" class="btn btn-secondary btn-sm ai-length" data-click="setAiLength" data-value="long" aria-pressed="false">Long</button>
+            </span>
+          </div>
+          <label class="ai-auto-audio"><input type="checkbox" id="aiAutoAudio" data-change="setAiAutoAudio"> Make the audio when the script is ready <span class="zone-meta">Keep this tab open while it works.</span></label>
+          <label class="ai-auto-audio"><input type="checkbox" id="aiAutoSplit" data-change="setAiAutoSplit"> Split narration and dialogue automatically <span class="zone-meta">Like Format Prose, for Write new and Continue. You can undo it.</span></label>
+          <textarea id="aiRequest" class="ai-request" rows="3" aria-label="What to write" placeholder="Describe the script you want, e.g. a 3-minute bedtime story about a fox and an owl"></textarea>
+          <div class="toolbar">
+            <select id="aiModel" class="ai-model" aria-label="Model" data-change="onAiModelChange"></select>
+            <button type="button" class="btn btn-ghost btn-sm btn-icon" data-click="refreshAiStatus" title="Check the AI program again" aria-label="Check the AI program again"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-refresh"></use></svg></button>
+            <button type="button" class="btn btn-primary btn-sm push-right" id="aiWriteBtn" data-click="aiWriteOrStop" disabled>Write Script</button>
+          </div>
+          <p id="aiPromptLine" class="ai-prompt-line"><span id="aiPromptText"></span> <button type="button" class="link-btn hidden" id="aiPromptLink" data-click="openAiSettings"></button></p>
+          <textarea id="aiOwnBox" class="ai-request hidden" rows="3" maxlength="20000" aria-label="Your instructions (optional)" placeholder="Your instructions (optional), e.g. Write warm, funny stories for young children." data-change="saveAiOwnBox"></textarea>
+          <p id="aiStatus" class="ai-status" role="status" aria-live="polite"></p>
+          <div id="aiSplitNote" class="ai-choice hidden">
+            <span id="aiSplitSummary"></span>
+            <button type="button" class="btn btn-secondary btn-sm" data-click="undoAiSplit">Undo split</button>
+          </div>
+          <div id="aiChoice" class="ai-choice hidden" role="group" aria-label="The script already has text">
+            <span>The script already has text.</span>
+            <button type="button" class="btn btn-primary btn-sm" data-click="aiInsertChoice" data-value="replace">Replace</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-click="aiInsertChoice" data-value="append">Add to end</button>
+            <button type="button" class="btn btn-ghost btn-sm" data-click="aiInsertChoice" data-value="cancel">Cancel</button>
+          </div>
+          <div id="aiSaveChoice" class="ai-choice hidden" role="group" aria-label="Your story will be replaced">
+            <span>Your story will be replaced by the next chapter.</span>
+            <button type="button" class="btn btn-primary btn-sm" data-click="aiSaveChoice" data-value="save">Save and continue</button>
+            <button type="button" class="btn btn-secondary btn-sm" data-click="aiSaveChoice" data-value="nosave">Continue without saving</button>
+            <button type="button" class="btn btn-ghost btn-sm" data-click="aiSaveChoice" data-value="cancel">Cancel</button>
+          </div>
+          <div id="aiDiffs" class="ai-diffs hidden">
+            <span id="aiDiffSummary"></span>
+            <button type="button" class="link-btn" data-click="toggleAiDiffs">Show differences</button>
+            <ul id="aiDiffList" class="ai-diff-list hidden"></ul>
+          </div>
+          <button type="button" class="link-btn" id="aiSettingsLink" data-click="toggleAiSettings" aria-expanded="false" aria-controls="aiSettings">Edit instructions</button>
+          <div id="aiSettings" class="ai-settings hidden">
+            <fieldset class="ai-fieldset">
+              <legend>Write new, for <span id="aiSetModelName"></span></legend>
+              <label class="ai-radio" id="aiUseLmRow"><input type="radio" name="aiWriteSource" id="aiUseLm" value="lm"> Use LM Studio's prompt</label>
+              <textarea id="aiLmPrompt" class="ai-request" rows="4" readonly aria-label="LM Studio's prompt (change it in LM Studio)"></textarea>
+              <label class="ai-radio"><input type="radio" name="aiWriteSource" id="aiUseOwn" value="own"> Use my own instructions</label>
+              <textarea id="aiOwnText" class="ai-request" rows="4" maxlength="20000" aria-label="My own instructions"></textarea>
+              <p id="aiLmParams" class="ai-prompt-line"></p>
+              <div class="toolbar"><button type="button" class="btn btn-primary btn-sm" data-click="saveAiWriteSettings">Save</button></div>
+            </fieldset>
+            <fieldset class="ai-fieldset">
+              <legend>Split my text</legend>
+              <textarea id="aiSplitText" class="ai-request" rows="4" maxlength="4000" aria-label="Instructions for Split my text"></textarea>
+              <div class="toolbar">
+                <button type="button" class="btn btn-primary btn-sm" data-click="saveAiSplitSettings">Save</button>
+                <button type="button" class="btn btn-ghost btn-sm" data-click="resetAiSplitSettings">Reset to default</button>
+              </div>
+            </fieldset>
+            <fieldset class="ai-fieldset">
+              <legend>Connection</legend>
+              <label class="ai-field">AI program <select id="aiProgram" data-change="onAiProgramChange"></select></label>
+              <label class="ai-field">Address <input type="text" id="aiBaseUrl" maxlength="100" spellcheck="false"></label>
+              <label class="ai-field hidden" id="aiContextRow">Longest text the model can handle (tokens)
+                <input type="number" id="aiContextLength" min="2048" max="262144" step="1">
+                <span class="ai-hint">Find it on the model's page or in your AI program's settings (often 4096, 8192 or 32768).</span></label>
+              <label class="ai-field">Give up if the AI program is silent for (minutes) <input type="number" id="aiTimeout" min="1" max="30" step="1"></label>
+              <div class="toolbar"><button type="button" class="btn btn-primary btn-sm" data-click="saveAiConnection">Save</button></div>
+            </fieldset>
+            <p id="aiSettingsStatus" class="ai-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+      </details>
+
+      <div class="toolbar">
+        <div id="dynamicTagButtons" class="tag-buttons"></div>
+      </div>
+      <div class="toolbar">
+        <button type="button" class="btn btn-secondary btn-sm" data-click="manualDetectSpeakers" title="Scan the script and set up a card for every speaker"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg> Detect Speakers <span class="autodetect-badge hidden" id="detectedCountBadge">0</span></button>
+        <button type="button" class="btn btn-secondary btn-sm" id="btnFormatProse" data-click="formatProseScript" title="Turn novel prose into dialogue and [Narrator] lines"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-sparkle"></use></svg> Format Prose</button>
+        <button type="button" class="btn btn-ghost btn-sm push-right" data-click="loadSampleScript" title="Replace the script with the lighthouse demo"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-reset"></use></svg> Reset Sample</button>
+      </div>
+
+      <textarea id="scriptInput" aria-label="Script" placeholder="Paste or type a script. Start each line with a speaker tag, for example:&#10;[Narrator] It was a dark and stormy night.&#10;[Speaker 1] Did you hear that?"></textarea>
+    </section>
+
+    <!-- Zone 2: Cast -->
+    <section class="zone zone-cast" aria-labelledby="castZoneTitle">
+      <div class="zone-head">
+        <h2 id="castZoneTitle">Cast</h2>
+        <span class="zone-meta">Detected from your script</span>
+        <button type="button" class="btn btn-ghost btn-sm" id="blendToggle" data-click="toggleBlender" aria-expanded="false" aria-controls="blendPanel" title="Mix up to three voices into a new voice of your own"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-blend"></use></svg> Blend voices</button>
+      </div>
+
+      <div class="blend-panel hidden" id="blendPanel" role="region" aria-labelledby="blendTitle">
+        <h3 id="blendTitle">Blend voices</h3>
+        <p class="muted">Mix up to three voices into a new voice. A blend usually sounds somewhere between its voices; some mixes sound odd, so listen before you save.</p>
+        <label class="blend-label" for="blendDescribe">Describe a voice</label>
+        <div class="blend-describe-row">
+          <input type="text" id="blendDescribe" maxlength="200" placeholder="e.g. a grumpy old troll with a deep voice" autocomplete="off">
+          <button type="button" class="btn btn-secondary" id="blendSuggest" data-click="suggestBlend" title="Pick voices that fit the description" aria-label="Suggest voices for the description">Suggest</button>
+        </div>
+        <p id="blendDescribeHelper" class="blend-message muted" role="status"></p>
+        <div id="blendRows" class="blend-rows"></div>
+        <button type="button" class="btn-dashed" id="blendAddRow" data-click="addBlendRow">+ Add a voice</button>
+        <div class="blend-save-row">
+          <label class="blend-label" for="blendPitch">Pitch</label>
+          <select id="blendPitch" title="A small lift for a child, a small drop for an older voice. Big changes sound sped-up.">
+            <option value="-3">−3 (lower)</option>
+            <option value="-2.5">−2.5 (lower)</option>
+            <option value="-2">−2 (lower)</option>
+            <option value="-1.5">−1.5 (lower)</option>
+            <option value="-1">−1 (lower)</option>
+            <option value="-0.5">−0.5 (lower)</option>
+            <option value="0" selected>0 (as is)</option>
+            <option value="0.5">+0.5 (higher)</option>
+            <option value="1">+1 (higher)</option>
+            <option value="1.5">+1.5 (higher)</option>
+            <option value="2">+2 (higher)</option>
+            <option value="2.5">+2.5 (higher)</option>
+            <option value="3">+3 (higher)</option>
+          </select>
+          <label class="blend-label" for="blendSpeed">Starting speed</label>
+          <input type="number" id="blendSpeed" min="0.5" max="2" step="0.05" placeholder="none" title="The speed a character gets when you pick this voice (empty: keep the character's speed)">
+        </div>
+        <label class="blend-label" for="blendText">Sample sentence</label>
+        <textarea id="blendText" class="blend-text" rows="2" maxlength="300"></textarea>
+        <button type="button" class="btn btn-secondary" id="blendListen" data-click="listenToBlend" title="Hear the mix reading the sample sentence" aria-label="Listen to the mix"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-play"></use></svg> Listen</button>
+        <div class="blend-save-row">
+          <label class="blend-label" for="blendName">Name</label>
+          <input type="text" id="blendName" maxlength="40" placeholder="e.g. old_sailor" autocomplete="off" spellcheck="false">
+          <label class="blend-label" for="blendType">Voice type</label>
+          <select id="blendType">
+            <option value="Female">Female</option>
+            <option value="Male">Male</option>
+            <option value="Child">Child / Youth</option>
+            <option value="Neutral" selected>Neutral</option>
+          </select>
+        </div>
+        <p id="blendMessage" class="blend-message" role="status"></p>
+        <div class="blend-buttons">
+          <button type="button" class="btn btn-primary" id="blendSave" data-click="saveBlend">Save</button>
+          <button type="button" class="btn btn-ghost" data-click="closeBlender">Cancel</button>
+        </div>
+        <h4 class="blend-list-title">Your voices</h4>
+        <ul id="blendList" class="blend-list"></ul>
+      </div>
+
+      <!-- Narrator -->
+      <div class="role-row" id="narratorCard">
+        <div class="role-header">
+          <div class="role-ident">
+            <span class="spk-avatar spk-narrator" aria-hidden="true">N</span>
+            <span class="role-name">Narrator</span>
+            <span class="role-badge">Storyteller</span>
+          </div>
+          <span id="speedBadge_Narrator" class="speed-badge">0.95x</span>
+        </div>
+        <div class="voice-select-bar">
+          <select id="voice_Narrator" data-change="onNarratorVoiceChange" aria-label="Narrator voice"></select>
+          <button type="button" class="btn-sample btn-icon" id="sampleBtn_Narrator" data-click="playVoiceSample" data-speaker="Narrator" title="Hear the Narrator's lines from your script at the chosen speed" aria-label="Hear the Narrator's lines"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-play"></use></svg></button>
+          <button type="button" class="btn-sample btn-icon" id="compareBtn_Narrator" data-click="compareVoiceSample" data-speaker="Narrator" title="Hear the same lines at 1.00x, then at the chosen speed" aria-label="Compare the Narrator at 1.00x and the chosen speed"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-compare"></use></svg></button>
+          <button type="button" class="btn btn-ghost btn-sm narrator-default-btn" id="narratorDefaultBtn" data-click="makeNarratorDefault" title="Use this voice and speed for the Narrator in new scripts">Make default</button>
+        </div>
+        <div class="speed-control-box">
+          <div class="speed-control-header">
+            <div class="speed-label-group">
+              <span class="speed-label">Speed</span>
+              <div class="speed-input-stepper">
+                <button type="button" class="speed-stepper-btn" data-click="stepSpeed" data-speaker="Narrator" data-value="-0.05" title="Decrease speed by 0.05" aria-label="Slower">−</button>
+                <input type="number" id="speedNum_Narrator" class="speed-num-input" value="0.95" min="0.5" max="2.0" step="0.05" data-input="onSpeedNumInput" data-change="formatSpeedNum" data-speaker="Narrator" aria-label="Narrator speed">
+                <span class="speed-unit">x</span>
+                <button type="button" class="speed-stepper-btn" data-click="stepSpeed" data-speaker="Narrator" data-value="0.05" title="Increase speed by 0.05" aria-label="Faster">+</button>
+              </div>
+            </div>
+            <div class="speed-presets-bar" id="speedPresets_Narrator">
+              <button type="button" class="speed-preset-btn" data-val="0.90" data-click="setSpeed" data-speaker="Narrator" data-value="0.90">0.90x</button>
+              <button type="button" class="speed-preset-btn active" data-val="0.95" data-click="setSpeed" data-speaker="Narrator" data-value="0.95">0.95x</button>
+              <button type="button" class="speed-preset-btn" data-val="1.00" data-click="setSpeed" data-speaker="Narrator" data-value="1.00">1.00x</button>
+              <button type="button" class="speed-preset-btn" data-val="1.05" data-click="setSpeed" data-speaker="Narrator" data-value="1.05">1.05x</button>
+              <button type="button" class="speed-preset-btn" data-val="1.10" data-click="setSpeed" data-speaker="Narrator" data-value="1.10">1.10x</button>
+              <button type="button" class="speed-preset-btn" data-val="1.20" data-click="setSpeed" data-speaker="Narrator" data-value="1.20">1.20x</button>
+            </div>
+          </div>
+          <div class="speed-slider-row">
+            <input type="range" id="speedSlider_Narrator" min="0.75" max="1.50" step="0.05" value="0.95" data-input="setSpeed" data-speaker="Narrator" aria-label="Narrator speed slider">
+          </div>
+        </div>
+      </div>
+
+      <div id="characterCardsContainer" class="card-stack"></div>
+
+      <button type="button" class="btn-dashed" data-click="addSpeakerCardManually">+ Add Speaker</button>
+
+      <div class="subsection">
+        <h3>Pacing</h3>
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="pacingDialogue">Pause between speakers</label>
+            <span id="pacingDialogueVal">0.35s</span>
+          </div>
+          <input type="range" id="pacingDialogue" min="0.1" max="1.0" step="0.05" value="0.35" data-input="showPacingValue" data-target="pacingDialogueVal">
+        </div>
+        <div class="slider-group">
+          <div class="slider-header">
+            <label for="pacingNarrator">Pause around the narrator</label>
+            <span id="pacingNarratorVal">0.65s</span>
+          </div>
+          <input type="range" id="pacingNarrator" min="0.2" max="1.5" step="0.05" value="0.65" data-input="showPacingValue" data-target="pacingNarratorVal">
+        </div>
+        <label class="pacing-choice" title="Natural preserves the voice's own questions and short replies, with modest pacing changes and no random volume changes. Narrator gets half of pacing changes. Explicit delivery cues remain available.">
+          <span>Performance</span>
+          <select id="performanceLevel">
+            <option value="off">Off</option>
+            <option value="natural" selected>Natural</option>
+            <option value="lively">Lively</option>
+          </select>
+        </label>
+        <label class="action-checkbox" title="Start listening as lines become ready. May pause if preparation falls behind. Uncheck to stop listening; Generate continues.">
+          <input type="checkbox" id="liveListenCheckbox" data-change="liveListeningChanged">
+          <span>Listen while preparing</span>
+        </label>
+        <p id="liveListenStatus" class="muted" role="status"></p>
+        <label class="action-checkbox" title="Matches active speech volume across ordinary lines, including short replies. Explicit whisper/shout cues still intentionally change loudness; peak protection stays on.">
+          <input type="checkbox" id="evenVolumeCheckbox" checked>
+          <span>Even out speaker volume <span class="muted">(recommended)</span></span>
+        </label>
+      </div>
+
+      <div class="subsection">
+        <div class="subsection-head">
+          <h3>Pronunciations</h3>
+          <span class="zone-meta">Names, acronyms &amp; tricky words</span>
+        </div>
+        <div id="pronunciationList" class="pron-list"></div>
+        <button type="button" class="btn-dashed" data-click="addPronunciation">+ Add Word</button>
+      </div>
+    </section>
+
+    <!-- Zone 3: Output -->
+    <section class="zone zone-output" id="outputSection" aria-labelledby="outputZoneTitle">
+      <div class="zone-head">
+        <h2 id="outputZoneTitle">Output</h2>
+        <div class="meta-tags">
+          <span class="meta-tag">Length <strong id="outDuration">-</strong></span>
+          <span class="meta-tag">Render time <strong id="outElapsed">-</strong></span>
+          <button type="button" id="clearOutputBtn" class="btn btn-ghost btn-sm hidden" data-click="clearOutput" title="Clear the transcript, downloads and player. Your script and cast stay as they are.">Clear</button>
+        </div>
+      </div>
+
+      <div id="outputEmpty" class="empty-state">
+        <p class="empty-title">No audio yet</p>
+        <p>Click <strong>Generate</strong> in the bar at the bottom. The transcript and downloads will appear here.</p>
+      </div>
+
+      <div class="transcript-section hidden" id="transcriptSection">
+        <div class="transcript-header">
+          <h3>Transcript</h3>
+          <span class="transcript-hint" id="transcriptHint">Click a line to jump to it</span>
+        </div>
+        <div class="transcript-list" id="transcriptList"></div>
+      </div>
+
+      <div class="export-section hidden" id="exportSection">
+        <h3>Downloads</h3>
+        <div class="export-buttons">
+          <a id="downloadLink" href="#" download="full_dialogue.wav" class="btn btn-primary hidden" title="Download the full combined dialogue track as WAV"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-download"></use></svg> Complete Dialogue (.wav)</a>
+          <a id="downloadZipLink" href="#" download="VoiceCast_All_Tracks.zip" class="btn btn-secondary hidden" title="Download all speaker tracks and the master track in a single ZIP"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-archive"></use></svg> All Tracks (.zip)</a>
+        </div>
+        <div id="individualTracksSection" class="tracks-section hidden">
+          <span class="zone-meta">Each speaker on their own track (time-aligned):</span>
+          <div id="individualTracksList" class="tracks-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Fixed playback bar -->
+  <footer class="player-bar" id="playerBar">
+    <div class="bar-progress-track" aria-hidden="true"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="bar-inner">
+      <div class="bar-generate">
+        <button type="button" class="btn btn-primary btn-generate" id="generateBtn" data-click="generateAudio" title="Generate the audio (Ctrl+Enter)">
+          <span class="spinner hidden" id="spinner"></span>
+          <span id="btnText">Generate</span>
+        </button>
+        <button type="button" class="btn btn-danger hidden" id="stopBtn" data-click="stopRender" title="Stop after the current line. Lines already rendered are kept, so Generate picks up where it left off. (Esc)"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-stop"></use></svg> Stop</button>
+        <div class="progress-box" id="progressBox">
+          <div class="progress-header">
+            <span id="progressTitle">Status</span>
+            <span class="progress-percent-val" id="progressPercent">0%</span>
+          </div>
+          <div class="progress-status-text" id="progressStatus">Ready to generate.</div>
+        </div>
+      </div>
+
+      <div class="bar-player">
+        <button type="button" id="btnSkipBack" class="btn btn-secondary btn-icon btn-skip" data-click="skipBack" disabled title="Back 10 seconds (←)" aria-label="Back 10 seconds"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-back10"></use></svg></button>
+        <button type="button" id="btnPlayMaster" class="btn btn-secondary btn-play-master" data-click="toggleMasterPlay" disabled title="Play / Pause (Space)">
+          <span id="playIcon"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-play"></use></svg></span> <span id="playText">Play</span>
+        </button>
+        <button type="button" id="btnSkipForward" class="btn btn-secondary btn-icon btn-skip" data-click="skipForward" disabled title="Forward 10 seconds (→)" aria-label="Forward 10 seconds"><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-forward10"></use></svg></button>
+        <div class="time-display">
+          <span id="currentTimeDisplay">00:00</span>
+          <span class="time-sep">/</span>
+          <span id="totalTimeDisplay">00:00</span>
+        </div>
+        <div class="waveform-wrapper" id="waveformWrapper" title="Click or drag to move through the audio" role="slider" tabindex="0" aria-label="Position in the audio" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0" aria-valuetext="00:00 of 00:00">
+          <canvas id="waveformCanvas"></canvas>
+          <div class="waveform-playhead" id="waveformPlayhead"></div>
+          <div class="waveform-hover-line" id="waveformHoverLine"></div>
+          <div class="waveform-hover-tooltip" id="waveformHoverTooltip">00:00</div>
+        </div>
+      </div>
+
+      <div class="bar-extras">
+        <label class="action-checkbox" title="Loop audio playback continuously">
+          <input type="checkbox" id="loopMasterCheckbox" data-change="syncLoopCheckboxes">
+          <span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-loop"></use></svg> Loop</span>
+        </label>
+        <label class="volume-control" title="Volume">
+          <span><svg class="icon" aria-hidden="true" focusable="false"><use href="#i-volume"></use></svg></span>
+          <input type="range" id="masterVolume" min="0" max="1" step="0.05" value="1" data-input="setMasterVolume" aria-label="Volume">
+        </label>
+      </div>
+    </div>
+    <audio id="mainAudio" preload="auto" class="hidden"></audio>
+  </footer>
+  <p id="srAnnounce" class="sr-only" role="status" aria-live="polite"></p>
+
+  <dialog id="importDialog" class="import-dialog" aria-labelledby="importTitle">
+    <h2 id="importTitle">Import text</h2>
+    <section class="import-part">
+      <h3>From a file</h3>
+      <p class="muted">A .txt or .md (Markdown) file. From Google Docs: File → Download → Markdown.</p>
+      <button type="button" class="btn btn-secondary" id="importFileBtn" data-click="chooseImportFile">Choose file…</button>
+      <input type="file" id="importFileInput" class="hidden" accept=".txt,.md,text/plain,text/markdown" data-change="onImportFileChosen">
+    </section>
+    <section class="import-part">
+      <h3>From a Google Docs link</h3>
+      <div class="import-link-row">
+        <input type="url" id="importLink" placeholder="https://docs.google.com/document/d/…" aria-label="Google Docs link">
+        <button type="button" class="btn btn-primary" id="importLinkBtn" data-click="importFromLink">Import</button>
+      </div>
+      <label class="import-allow"><input type="checkbox" id="importLinksAllowed" data-change="onImportLinksToggle"> Allow Google Docs links (connects to the internet)</label>
+      <p id="importLinksOffNote" class="muted">VoiceCast stays offline until you tick this box.</p>
+      <p class="muted">In Google Docs, click Share and set General access to <i>Anyone with the link</i>.</p>
+    </section>
+    <section class="import-part">
+      <h3>From LM Studio</h3>
+      <div class="import-link-row">
+        <select id="importChatList" aria-label="Saved LM Studio chat"></select>
+        <select id="importChatWhich" aria-label="Which part of the chat">
+          <option value="last">The last answer</option>
+          <option value="all">All the answers</option>
+        </select>
+        <button type="button" class="btn btn-primary" id="importChatBtn" data-click="importFromChat">Import</button>
+      </div>
+      <p id="importChatNote" class="muted"></p>
+      <label class="import-allow"><input type="checkbox" id="inboxEnabled" data-change="onInboxToggle"> Receive scripts from LM Studio</label>
+      <p class="muted">A model in LM Studio can then send a script here with the Send to VoiceCast tool. The one-time setup is in the guide, under "Send to VoiceCast from LM Studio".</p>
+    </section>
+    <div id="importChoice" class="import-choice hidden" role="group" aria-label="Where should the text go?">
+      <span>Your script already has text.</span>
+      <button type="button" class="btn btn-secondary btn-sm" data-click="importChoice" data-value="replace">Replace</button>
+      <button type="button" class="btn btn-secondary btn-sm" data-click="importChoice" data-value="append">Add to end</button>
+      <button type="button" class="btn btn-ghost btn-sm" data-click="importChoice" data-value="cancel">Cancel</button>
+    </div>
+    <p id="importMessage" class="import-message" role="status"></p>
+    <div class="import-actions"><button type="button" class="btn btn-ghost" data-click="closeImport">Close</button></div>
+  </dialog>
+
+  <script src="/static/live_listening.js"></script>
+  <script src="/static/studio.js"></script>
+</body>
+</html>

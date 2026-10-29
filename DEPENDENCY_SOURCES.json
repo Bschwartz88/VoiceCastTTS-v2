@@ -1,0 +1,689 @@
+[
+  {
+    "package": "attrs",
+    "version": "26.1.0",
+    "source_archives": [
+      {
+        "filename": "attrs-26.1.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/9a/8e/82a0fe20a541c03148528be8cac2408564a6c9a0cc7e9171802bc1d26985/attrs-26.1.0.tar.gz",
+        "sha256": "d03ceb89cb322a8fd706d4fb91940737b6642aa36998fe130a9bc96c985eff32"
+      }
+    ],
+    "project_urls": {
+      "Changelog": "https://www.attrs.org/en/stable/changelog.html",
+      "Documentation": "https://www.attrs.org/",
+      "Funding": "https://github.com/sponsors/hynek",
+      "GitHub": "https://github.com/python-attrs/attrs",
+      "Tidelift": "https://tidelift.com/subscription/pkg/pypi-attrs?utm_source=pypi-attrs&utm_medium=pypi"
+    },
+    "distribution_license": "MIT",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "babel",
+    "version": "2.18.0",
+    "source_archives": [
+      {
+        "filename": "babel-2.18.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/7d/b2/51899539b6ceeeb420d40ed3cd4b7a40519404f9baf3d4ac99dc413a834b/babel-2.18.0.tar.gz",
+        "sha256": "b80b99a14bd085fcacfa15c9165f651fbb3406e66cc603abf11c5750937c992d"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://babel.pocoo.org/",
+      "Source": "https://github.com/python-babel/babel"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "cffi",
+    "version": "2.1.1",
+    "source_archives": [
+      {
+        "filename": "cffi-2.1.1.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/9e/ef/008a1939e372c06329a3fce4279c02f328488f3526744906eeec3da7ad5f/cffi-2.1.1.tar.gz",
+        "sha256": "dd31f52ea1086513bb9df30f8fcee9b8918323ae067a3d5b78bc826a000712be"
+      }
+    ],
+    "project_urls": {
+      "Changelog": "https://cffi.readthedocs.io/en/latest/whatsnew.html",
+      "Contact": "https://groups.google.com/forum/#!forum/python-cffi",
+      "Documentation": "https://cffi.readthedocs.io/",
+      "Download": "https://github.com/python-cffi/cffi/releases",
+      "Issue Tracker": "https://github.com/python-cffi/cffi/issues",
+      "Source Code": "https://github.com/python-cffi/cffi"
+    },
+    "distribution_license": "MIT-0",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "cloudpickle",
+    "version": "3.1.2",
+    "source_archives": [
+      {
+        "filename": "cloudpickle-3.1.2.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/27/fb/576f067976d320f5f0114a8d9fa1215425441bb35627b1993e5afd8111e5/cloudpickle-3.1.2.tar.gz",
+        "sha256": "7fda9eb655c9c230dab534f1983763de5835249750e85fbcef43aaa30a9a2414"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/cloudpipe/cloudpickle"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "colorama",
+    "version": "0.4.6",
+    "source_archives": [
+      {
+        "filename": "colorama-0.4.6.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/d8/53/6f443c9a4a8358a93a6792e2acffb9d9d5cb0a5cfd8802644b7b1c9a02e4/colorama-0.4.6.tar.gz",
+        "sha256": "08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/tartley/colorama"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "colorlog",
+    "version": "6.12.0",
+    "source_archives": [
+      {
+        "filename": "colorlog-6.12.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/8c/55/ba79756cb90c8d69d599d57785398ac87bba7b19c80e87f4e8a562197c93/colorlog-6.12.0.tar.gz",
+        "sha256": "2a7924c1dadf18b22a0eb8b06d1c7b01d5341707ec1641eb6fcc4fde0c3e8e5f"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/borntyping/python-colorlog"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "csvw",
+    "version": "4.1.1",
+    "source_archives": [
+      {
+        "filename": "csvw-4.1.1.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/3f/ab/8c7b1c103a91656d023be24f824a6faab25d9ecc4a43310b134793200458/csvw-4.1.1.tar.gz",
+        "sha256": "5714d43d744e4069e2b6d0e58a67829ca1bf8d0578aad92cfc74e87d69e6cb31"
+      }
+    ],
+    "project_urls": {
+      "Bug Tracker": "https://github.com/cldf/csvw/issues",
+      "Homepage": "https://github.com/cldf/csvw"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "dlinfo",
+    "version": "2.0.0",
+    "source_archives": [
+      {
+        "filename": "dlinfo-2.0.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/85/8e/8f2f94cd40af1b51e8e371a83b385d622170d42f98776441a6118f4dd682/dlinfo-2.0.0.tar.gz",
+        "sha256": "88a2bc04f51d01bc604cdc9eb1c3cc0bde89057532ca6a3e71a41f6235433e17"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/fphammerle/python-dlinfo"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "espeakng-loader",
+    "version": "0.2.4",
+    "source_archives": [],
+    "project_urls": {},
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "flatbuffers",
+    "version": "25.12.19",
+    "source_archives": [],
+    "project_urls": {
+      "Documentation": "https://google.github.io/flatbuffers/",
+      "Homepage": "https://google.github.io/flatbuffers/",
+      "Source": "https://github.com/google/flatbuffers"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "isodate",
+    "version": "0.7.2",
+    "source_archives": [
+      {
+        "filename": "isodate-0.7.2.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/54/4d/e940025e2ce31a8ce1202635910747e5a87cc3a6a6bb2d00973375014749/isodate-0.7.2.tar.gz",
+        "sha256": "4cd1aa0f43ca76f4a6c6c0292a85f40b35ec2e43e315b59f06e6d32171a953e6"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/gweis/isodate/"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "joblib",
+    "version": "1.6.0",
+    "source_archives": [
+      {
+        "filename": "joblib-1.6.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/d5/1d/537ab090f302b838943a1b56497dd53059b9a9b46a074936470173a2e207/joblib-1.6.0.tar.gz",
+        "sha256": "2ccc96785b12046c08fd6d55839c12857831b54a3c1673ffadd2f04bfc4eda03"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://joblib.readthedocs.io",
+      "Source": "https://github.com/joblib/joblib"
+    },
+    "distribution_license": "BSD-3-Clause",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "jsonschema",
+    "version": "4.26.0",
+    "source_archives": [
+      {
+        "filename": "jsonschema-4.26.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/b3/fc/e067678238fa451312d4c62bf6e6cf5ec56375422aee02f9cb5f909b3047/jsonschema-4.26.0.tar.gz",
+        "sha256": "0c26707e2efad8aa1bfc5b7ce170f3fccc2e4918ff85989ba9ffa9facb2be326"
+      }
+    ],
+    "project_urls": {
+      "Changelog": "https://github.com/python-jsonschema/jsonschema/blob/main/CHANGELOG.rst",
+      "Documentation": "https://python-jsonschema.readthedocs.io/",
+      "Funding": "https://github.com/sponsors/Julian",
+      "Homepage": "https://github.com/python-jsonschema/jsonschema",
+      "Issues": "https://github.com/python-jsonschema/jsonschema/issues/",
+      "Source": "https://github.com/python-jsonschema/jsonschema",
+      "Tidelift": "https://tidelift.com/subscription/pkg/pypi-jsonschema?utm_source=pypi-jsonschema&utm_medium=referral&utm_campaign=pypi-link"
+    },
+    "distribution_license": "MIT",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "jsonschema-specifications",
+    "version": "2025.9.1",
+    "source_archives": [
+      {
+        "filename": "jsonschema_specifications-2025.9.1.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/19/74/a633ee74eb36c44aa6d1095e7cc5569bebf04342ee146178e2d36600708b/jsonschema_specifications-2025.9.1.tar.gz",
+        "sha256": "b540987f239e745613c7a9176f3edb72b832a4ac465cf02712288397832b5e8d"
+      }
+    ],
+    "project_urls": {
+      "Documentation": "https://jsonschema-specifications.readthedocs.io/",
+      "Funding": "https://github.com/sponsors/Julian",
+      "Homepage": "https://github.com/python-jsonschema/jsonschema-specifications",
+      "Issues": "https://github.com/python-jsonschema/jsonschema-specifications/issues/",
+      "Source": "https://github.com/python-jsonschema/jsonschema-specifications",
+      "Tidelift": "https://tidelift.com/subscription/pkg/pypi-jsonschema-specifications?utm_source=pypi-jsonschema-specifications&utm_medium=referral&utm_campaign=pypi-link"
+    },
+    "distribution_license": "MIT",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "kokoro-onnx",
+    "version": "0.4.7",
+    "source_archives": [
+      {
+        "filename": "kokoro_onnx-0.4.7.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/47/0c/e1df9898b917f361f48a06589b4f0c67c1db98aa6a9825041dc9da77fbfd/kokoro_onnx-0.4.7.tar.gz",
+        "sha256": "a8470ae9da35390be39a166c481a252a3597d392c18913fa0cdd6a64200e2e4e"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/thewh1teagle/kokoro-onnx",
+      "Issues": "https://github.com/thewh1teagle/kokoro-onnx/issues",
+      "Repository": "https://github.com/thewh1teagle/kokoro-onnx"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "language-tags",
+    "version": "1.3.2",
+    "source_archives": [
+      {
+        "filename": "language_tags-1.3.2.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/61/ef/8deeb6524134911f5cddcf772cc938a1f890e9d36e45cb2ee004d9c1805b/language_tags-1.3.2.tar.gz",
+        "sha256": "fdce91ca2f770710853b3f413205042225e8e64108e6fdb101677d32bab11814"
+      }
+    ],
+    "project_urls": {
+      "Documentation": "https://language-tags.readthedocs.io/en/latest/",
+      "History": "https://github.com/OnroerendErfgoed/language-tags/blob/master/HISTORY.rst",
+      "Source": "https://github.com/OnroerendErfgoed/language-tags",
+      "Tracker": "https://github.com/OnroerendErfgoed/language-tags/issues"
+    },
+    "distribution_license": "MIT",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "numpy",
+    "version": "2.5.3",
+    "source_archives": [
+      {
+        "filename": "numpy-2.5.3.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/13/01/11703282db468b85f6f7b8c7f22d058de5970d5c7e60a3a8aaa313c3de36/numpy-2.5.3.tar.gz",
+        "sha256": "df2d5874ff183595a4ba404edd04f6bd9b5505c1d7708573f6a6c17489a67563"
+      }
+    ],
+    "project_urls": {
+      "documentation": "https://numpy.org/doc/",
+      "download": "https://pypi.org/project/numpy/#files",
+      "homepage": "https://numpy.org",
+      "release notes": "https://numpy.org/doc/stable/release",
+      "source": "https://github.com/numpy/numpy",
+      "tracker": "https://github.com/numpy/numpy/issues"
+    },
+    "distribution_license": "BSD-3-Clause AND 0BSD AND MIT AND Zlib AND CC0-1.0",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "onnxruntime",
+    "version": "1.30.0",
+    "source_archives": [],
+    "project_urls": {
+      "Download": "https://github.com/microsoft/onnxruntime/tags",
+      "Homepage": "https://onnxruntime.ai"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "packaging",
+    "version": "26.3",
+    "source_archives": [
+      {
+        "filename": "packaging-26.3.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/7d/fa/3944b40b07da9ce895c0e6303a5ab7d53da063554f534556b134a54d6093/packaging-26.3.tar.gz",
+        "sha256": "94edc256424af38762eb31306eed28beb9f0efc50a8837492c9d6fd6004aed79"
+      }
+    ],
+    "project_urls": {
+      "Documentation": "https://packaging.pypa.io/",
+      "Source": "https://github.com/pypa/packaging"
+    },
+    "distribution_license": "Apache-2.0 OR BSD-2-Clause",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "phonemizer-fork",
+    "version": "3.3.1",
+    "source_archives": [
+      {
+        "filename": "phonemizer_fork-3.3.1.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/42/bc/6d626024573810fdf54925670f4798456ef56c764878f50cf3bc397085bd/phonemizer_fork-3.3.1.tar.gz",
+        "sha256": "483a2751ea435b9859e2ddca7d4ec817e54a82f3d2ad5ad2fd8fbd40e3bdf89e"
+      }
+    ],
+    "project_urls": {
+      "Changelog": "https://github.com/bootphon/phonemizer/blob/master/docs/source/changelog.rst",
+      "Documentation": "https://bootphon.github.io/phonemizer/",
+      "Issues": "https://github.com/bootphon/phonemizer",
+      "Repository": "https://github.com/bootphon/phonemizer"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "pillow",
+    "version": "13.0.0",
+    "source_archives": [
+      {
+        "filename": "pillow-13.0.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/ce/a4/9cc30690a394a8305e8be4c9036aa16d0dfddadd09079860b582f562496d/pillow-13.0.0.tar.gz",
+        "sha256": "cdcd1ba258178f7356d74170c9a81ba4eab6a5d55748bc402a5a2a6fe6be3510"
+      }
+    ],
+    "project_urls": {
+      "Changelog": "https://github.com/python-pillow/Pillow/releases",
+      "Documentation": "https://pillow.readthedocs.io",
+      "Funding": "https://tidelift.com/lifter/search/pypi/pillow",
+      "Homepage": "https://python-pillow.org",
+      "Mastodon": "https://fosstodon.org/@pillow",
+      "Release notes": "https://pillow.readthedocs.io/en/stable/releasenotes/index.html",
+      "Security": "https://pillow.readthedocs.io/en/stable/handbook/security.html",
+      "Source": "https://github.com/python-pillow/Pillow"
+    },
+    "distribution_license": "MIT-CMU",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "protobuf",
+    "version": "7.36.2",
+    "source_archives": [
+      {
+        "filename": "protobuf-7.36.2.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/d9/89/5b8517baa72f84a67b8a307ba953c91057af618bf40bf676f3c03551f8f0/protobuf-7.36.2.tar.gz",
+        "sha256": "497d0463ff3316681da6c0b9e8d06cb465d61abce00b613ab42226175644d1bb"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://developers.google.com/protocol-buffers/"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "pycparser",
+    "version": "3.12",
+    "source_archives": [
+      {
+        "filename": "pycparser-3.12.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/cb/27/eeb9f307bf07060f3d9f9aa0fb8c15b01bdfded0a941e4b2719c7f94cacd/pycparser-3.12.tar.gz",
+        "sha256": "f03387877eab82ce01bbdfd0ba7252ee55a90b1c708d5129e2ce915475cf1db6"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/eliben/pycparser"
+    },
+    "distribution_license": "BSD-3-Clause",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "pyparsing",
+    "version": "3.3.3",
+    "source_archives": [
+      {
+        "filename": "pyparsing-3.3.3.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/e4/11/b213bebff182584360cb8d17c72c1677fec5c5c228de439e63bcf8ab1c8f/pyparsing-3.3.3.tar.gz",
+        "sha256": "928ae7e20211f3b6f3915a72f06a0cfd29ab9d24279dd6346b6b1a7146397d36"
+      }
+    ],
+    "project_urls": {
+      "Documentation": "https://pyparsing-docs.readthedocs.io/en/latest/",
+      "Homepage": "https://github.com/pyparsing/pyparsing/",
+      "Source": "https://github.com/pyparsing/pyparsing.git"
+    },
+    "distribution_license": "MIT",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "python-dateutil",
+    "version": "3.0.0",
+    "source_archives": [
+      {
+        "filename": "python_dateutil-3.0.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/0e/df/f15f80383f152452d8985b36d95cb8751f901a3e0ff4cd27f7e118f168e2/python_dateutil-3.0.0.tar.gz",
+        "sha256": "7ebcb3c29a92f3ceafe79a7a48a5c45677e9e004bbeec5742ac0bbb00560b7a2"
+      }
+    ],
+    "project_urls": {
+      "Documentation": "https://dateutil.readthedocs.io/en/stable/",
+      "Homepage": "https://github.com/dateutil/dateutil",
+      "Source": "https://github.com/dateutil/dateutil"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "rdflib",
+    "version": "7.6.0",
+    "source_archives": [
+      {
+        "filename": "rdflib-7.6.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/98/f5/18bb77b7af9526add0c727a3b2048959847dc5fb030913e2918bf384fec3/rdflib-7.6.0.tar.gz",
+        "sha256": "6c831288d5e4a5a7ece85d0ccde9877d512a3d0f02d7c06455d00d6d0ea379df"
+      }
+    ],
+    "project_urls": {
+      "Documentation": "https://rdflib.readthedocs.org/",
+      "Homepage": "https://github.com/RDFLib/rdflib",
+      "Repository": "https://github.com/RDFLib/rdflib"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "referencing",
+    "version": "0.37.0",
+    "source_archives": [
+      {
+        "filename": "referencing-0.37.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/22/f5/df4e9027acead3ecc63e50fe1e36aca1523e1719559c499951bb4b53188f/referencing-0.37.0.tar.gz",
+        "sha256": "44aefc3142c5b842538163acb373e24cce6632bd54bdb01b21ad5863489f50d8"
+      }
+    ],
+    "project_urls": {
+      "Changelog": "https://referencing.readthedocs.io/en/stable/changes/",
+      "Documentation": "https://referencing.readthedocs.io/",
+      "Funding": "https://github.com/sponsors/Julian",
+      "Homepage": "https://github.com/python-jsonschema/referencing",
+      "Issues": "https://github.com/python-jsonschema/referencing/issues/",
+      "Source": "https://github.com/python-jsonschema/referencing",
+      "Tidelift": "https://tidelift.com/subscription/pkg/pypi-referencing?utm_source=pypi-referencing&utm_medium=referral&utm_campaign=pypi-link"
+    },
+    "distribution_license": "MIT",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "regex",
+    "version": "2026.9.29",
+    "source_archives": [
+      {
+        "filename": "regex-2026.9.29.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/fc/f2/af1da9d3ceed77bfcdce40427d49ba0be94e4fe84245e3bfef68c10e75b6/regex-2026.9.29.tar.gz",
+        "sha256": "8b5fcc4771732191b2b7d1dd68d8f0353f47f8d90b6150f6dce58bf1112442cb"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/mrabarnett/mrab-regex"
+    },
+    "distribution_license": "Apache-2.0 AND CNRI-Python",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "rfc3986",
+    "version": "1.5.0",
+    "source_archives": [
+      {
+        "filename": "rfc3986-1.5.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/79/30/5b1b6c28c105629cc12b33bdcbb0b11b5bb1880c6cfbd955f9e792921aa8/rfc3986-1.5.0.tar.gz",
+        "sha256": "270aaf10d87d0d4e095063c65bf3ddbc6ee3d0b226328ce21e036f946e421835"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "http://rfc3986.readthedocs.io"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "rpds-py",
+    "version": "2026.9.1",
+    "source_archives": [
+      {
+        "filename": "rpds_py-2026.9.1.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/42/68/3bd46b8a5e01d3c2ebdf9c5e9497912e3fe0cde02bac21a7130ca866e403/rpds_py-2026.9.1.tar.gz",
+        "sha256": "4793ef7f78268b124b73fa933440f01d258bbae01de9fa53e9080c9ab0425a12"
+      }
+    ],
+    "project_urls": {
+      "Documentation": "https://rpds.readthedocs.io/",
+      "Funding": "https://github.com/sponsors/Julian",
+      "Homepage": "https://github.com/crate-py/rpds",
+      "Issues": "https://github.com/crate-py/rpds/issues/",
+      "Source": "https://github.com/crate-py/rpds",
+      "Tidelift": "https://tidelift.com/subscription/pkg/pypi-rpds-py?utm_source=pypi-rpds-py&utm_medium=referral&utm_campaign=pypi-link",
+      "Upstream": "https://github.com/orium/rpds"
+    },
+    "distribution_license": "MIT",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "segments",
+    "version": "2.4.0",
+    "source_archives": [
+      {
+        "filename": "segments-2.4.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/8b/57/85cac3a8e32370e88fa5fa92812edb6025db7fcbed51452bd56ee1524957/segments-2.4.0.tar.gz",
+        "sha256": "bba71f5520ddd54c8aa2f4d765a60618c6862162d6e7356a4a097f2223166f5b"
+      }
+    ],
+    "project_urls": {
+      "Bug Tracker": "https://github.com/cldf/segments/issues",
+      "Homepage": "https://github.com/cldf/segments"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "six",
+    "version": "1.17.0",
+    "source_archives": [
+      {
+        "filename": "six-1.17.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/94/e7/b2c673351809dca68a0e064b6af791aa332cf192da575fd474ed7d6f16a2/six-1.17.0.tar.gz",
+        "sha256": "ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/benjaminp/six"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "soundfile",
+    "version": "0.14.0",
+    "source_archives": [
+      {
+        "filename": "soundfile-0.14.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/d2/db/949331952a6fb1c5b12e9de80fd08747966c2039d1a61db4764fbd3981c2/soundfile-0.14.0.tar.gz",
+        "sha256": "ba1c1a2d618bca5c406647c83b89f07cc8810fa506a50622a6993ba130c1de11"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://github.com/bastibe/python-soundfile"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "termcolor",
+    "version": "3.3.0",
+    "source_archives": [
+      {
+        "filename": "termcolor-3.3.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/46/79/cf31d7a93a8fdc6aa0fbb665be84426a8c5a557d9240b6239e9e11e35fc5/termcolor-3.3.0.tar.gz",
+        "sha256": "348871ca648ec6a9a983a13ab626c0acce02f515b9e1983332b17af7979521c5"
+      }
+    ],
+    "project_urls": {
+      "Changelog": "https://github.com/termcolor/termcolor/releases",
+      "Homepage": "https://github.com/termcolor/termcolor",
+      "Source": "https://github.com/termcolor/termcolor"
+    },
+    "distribution_license": "MIT",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "typing_extensions",
+    "version": "4.16.0",
+    "source_archives": [
+      {
+        "filename": "typing_extensions-4.16.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/f6/cc/6253133b5bb138fc3306cebfbda2c520f545d36b5be2c7255cc528bb45d6/typing_extensions-4.16.0.tar.gz",
+        "sha256": "dc983d19a509c94dba722ee6abd33940f7c05a89e243c47e907eb4db6f1a43e5"
+      }
+    ],
+    "project_urls": {
+      "Bug Tracker": "https://github.com/python/typing_extensions/issues",
+      "Changes": "https://github.com/python/typing_extensions/blob/main/CHANGELOG.md",
+      "Documentation": "https://typing-extensions.readthedocs.io/",
+      "Home": "https://github.com/python/typing_extensions",
+      "Q & A": "https://github.com/python/typing/discussions",
+      "Repository": "https://github.com/python/typing_extensions"
+    },
+    "distribution_license": "PSF-2.0",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "tzdata",
+    "version": "2026.5",
+    "source_archives": [
+      {
+        "filename": "tzdata-2026.5.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/d9/68/f1b440335057bfce71b6e50a9d09445aa2ecbd08359a337976627b8409e7/tzdata-2026.5.tar.gz",
+        "sha256": "8cc73c0a0bfca7dbfa59235d60b2eff82231dee33f53d206db1acd9173cfc0a7"
+      }
+    ],
+    "project_urls": {
+      "Bug Reports": "https://github.com/python/tzdata/issues",
+      "Documentation": "https://tzdata.python.org",
+      "Homepage": "https://github.com/python/tzdata",
+      "Source": "https://github.com/python/tzdata"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "uritemplate",
+    "version": "4.2.0",
+    "source_archives": [
+      {
+        "filename": "uritemplate-4.2.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/98/60/f174043244c5306c9988380d2cb10009f91563fc4b31293d27e17201af56/uritemplate-4.2.0.tar.gz",
+        "sha256": "480c2ed180878955863323eea31b0ede668795de182617fef9c6ca09e6ec9d0e"
+      }
+    ],
+    "project_urls": {
+      "Homepage": "https://uritemplate.readthedocs.org",
+      "Source": "https://github.com/python-hyper/uritemplate"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "websocket-client",
+    "version": "1.9.0",
+    "source_archives": [
+      {
+        "filename": "websocket_client-1.9.0.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/2c/41/aa4bf9664e4cda14c3b39865b12251e8e7d239f4cd0e3cc1b6c2ccde25c1/websocket_client-1.9.0.tar.gz",
+        "sha256": "9e813624b6eb619999a97dc7958469217c3176312b3a16a4bd1bc7e08a46ec98"
+      }
+    ],
+    "project_urls": {
+      "Documentation": "https://websocket-client.readthedocs.io/",
+      "Download": "https://github.com/websocket-client/websocket-client/releases",
+      "Homepage": "https://github.com/websocket-client/websocket-client.git",
+      "Source": "https://github.com/websocket-client/websocket-client/"
+    },
+    "distribution_license": "See included license and package metadata",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  },
+  {
+    "package": "pip",
+    "version": "26.2.2",
+    "source_archives": [
+      {
+        "filename": "pip-26.2.2.tar.gz",
+        "url": "https://files.pythonhosted.org/packages/fa/e8/0842d757e483e895e670f655084cfe8b8c72580c6769a76b30b2789a0608/pip-26.2.2.tar.gz",
+        "sha256": "3a8e5c800492787f33a4114ef54444546c340df428974ebba17e0fd47e11af2f"
+      }
+    ],
+    "project_urls": {
+      "Changelog": "https://pip.pypa.io/en/stable/news/",
+      "Documentation": "https://pip.pypa.io",
+      "Homepage": "https://pip.pypa.io/",
+      "Source": "https://github.com/pypa/pip"
+    },
+    "distribution_license": "MIT",
+    "note": "Source-release dependency index; not a certification of an upstream binary build."
+  }
+]

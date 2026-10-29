@@ -1,0 +1,33 @@
+VoiceCastTTS
+Copyright 2026 Bschwartz88
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+This project uses the following third-party components, which are not
+included in this repository unless noted:
+
+- Kokoro-82M text-to-speech model and voices, by hexgrad
+  Apache License 2.0 - https://huggingface.co/hexgrad/Kokoro-82M
+  The model files (kokoro-v1.0.onnx, voices-v1.0.bin) are downloaded on
+  first launch. No extra voices are included: custom_voices/ is for your own
+  blends and imports, which stay on your computer.
+
+- kokoro-onnx, by thewh1teagle
+  MIT License - https://github.com/thewh1teagle/kokoro-onnx
+
+- ONNX Runtime, by Microsoft
+  MIT License - https://onnxruntime.ai
+
+- python-soundfile, by Bastian Bechtold
+  BSD 3-Clause License - https://github.com/bastibe/python-soundfile
+
+- NumPy
+  BSD 3-Clause License (with bundled components under other permissive
+  licenses) - https://numpy.org
+
+Additional runtime/transitive licensing evidence is in DEPENDENCY_INVENTORY.md
+and THIRD_PARTY_NOTICES/ (including GPL/LGPL and native/vendor notices).
+VoiceCast's Apache-2.0 license applies to its source; it does not replace
+third-party component terms. Phonemizer-fork/eSpeak NG and bundled media
+libraries require separate consideration for a distributed runtime bundle.
+See RELEASE_READINESS.md before preparing an installer or binary release.

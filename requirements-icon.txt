@@ -1,0 +1,2 @@
+# Optional icon rebuilding only; unnecessary for running the studio.
+Pillow==13.0.0

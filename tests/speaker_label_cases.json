@@ -1,0 +1,107 @@
+[
+  {
+    "input": "Ben",
+    "name": "Ben",
+    "cue": ""
+  },
+  {
+    "input": "Ben (whispering)",
+    "name": "Ben",
+    "cue": "(whispering)"
+  },
+  {
+    "input": "Ben (ANGRY)",
+    "name": "Ben",
+    "cue": "(angrily)"
+  },
+  {
+    "input": "Ben (gruffly)",
+    "name": "Ben",
+    "cue": "(gruffly)"
+  },
+  {
+    "input": "Ben (male, 30)",
+    "name": "Ben",
+    "cue": "(male, 30)"
+  },
+  {
+    "input": "Speaker 1 (Lila)",
+    "name": "Lila",
+    "cue": ""
+  },
+  {
+    "input": "Speaker 1 (whispers)",
+    "name": "Speaker 1",
+    "cue": "(whispers)"
+  },
+  {
+    "input": "Speaker 1 (Angry)",
+    "name": "Speaker 1",
+    "cue": "(angrily)"
+  },
+  {
+    "input": "Speaker 1 (Young Woman)",
+    "name": "Speaker 1",
+    "cue": "(Young Woman)"
+  },
+  {
+    "input": "Speaker 1 (Looks Behind Him)",
+    "name": "Speaker 1",
+    "cue": "(Looks Behind Him)"
+  },
+  {
+    "input": "Speaker 2 (Mr. Brown)",
+    "name": "Mr. Brown",
+    "cue": ""
+  },
+  {
+    "input": "Speaker 3 (Lila) (whisper)",
+    "name": "Lila",
+    "cue": "(whispers)"
+  },
+  {
+    "input": "NARRATOR (calm)",
+    "name": "Narrator",
+    "cue": "(calm)"
+  },
+  {
+    "input": "Ben (angry) (looks behind him)",
+    "name": "Ben",
+    "cue": "(angrily) (looks behind him)"
+  },
+  {
+    "input": "Ben (speaking (quietly))",
+    "name": "Ben",
+    "cue": "(speaking (quietly))"
+  },
+  {
+    "input": "Ben (angry",
+    "name": "Ben (angry",
+    "cue": ""
+  },
+  {
+    "input": "Ben (angry) junior",
+    "name": "Ben (angry) junior",
+    "cue": ""
+  },
+  {
+    "input": "  Old\nMan  ",
+    "name": "Old Man",
+    "cue": ""
+  },
+  {
+    "input": "[Ben]",
+    "name": "Ben",
+    "cue": ""
+  },
+  {
+    "input": "",
+    "name": "",
+    "cue": ""
+  },
+  {
+    "input": "Ben (constructor)",
+    "name": "Ben",
+    "cue": "(constructor)"
+  }
+]

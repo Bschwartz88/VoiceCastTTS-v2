@@ -1,0 +1,95 @@
+# =======================================================
+# VoiceCastTTS — Git Ignore Configuration
+# =======================================================
+
+# Model Weights (downloaded automatically on first launch via ensure_onnx_models)
+kokoro-v1.0.onnx
+voices-v1.0.bin
+*.onnx
+*.bin
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Audio Output Files
+output/**/*.wav
+*.zip
+!output/previews/.gitkeep
+
+# Personal settings (favorite voices, closed folders)
+user_settings.json
+
+# Browser test screenshots
+tests/browser/screenshots/
+
+# Virtual Environment
+.venv/
+venv/
+
+# Local Claude Code settings
+.claude/
+
+# Temporary Download Files
+*.tmp
+# Your own voices and their Describe-a-voice traits stay on this PC; only the empty folder is uploaded.
+custom_voices/*
+!custom_voices/.gitkeep
+
+# OS & Editor Artifacts
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local Notes & Session Summaries
+VoiceCast_Studio_Session_Summary.md
+
+# Script Assistant troubleshooting file (what the model sent)
+output/script_assistant_problem.txt
+output/studio_port.txt
+
+# Local-only backups and leftovers (never upload: the bundle holds old commit emails)
+*.bundle
+VoiceCastTTS_backups/
+_to_delete/
+_diag_lmstudio.py
+output/diag_lmstudio_raw.txt
+
+# Working notes, plans and specs (local only, never uploaded)
+HANDOFF.md
+docs/superpowers/
+
+# Build progress logs (local only)
+.superpowers/
+
+# Local continuation and credentials (not source backup)
+LAB_CHECKPOINT.md
+LAB_REVIEW.md
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# v2 private runtime, capabilities and all generated output
+/.runtime/
+/output/*
+!/output/previews/
+/output/previews/*
+!/output/previews/.gitkeep
+
+# Detailed legacy-repository privacy review remains local
+GITHUB_PRIVACY_REVIEW_LOCAL.md
+
+# Private retained data from consolidation; never publish
+/.local_data/
+
+# Editable personal configuration; source uses the example
+/voice_config.json
+
+# Current local-only checkpoints
+CHECKPOINT.md
+LOCAL_REVIEW.md

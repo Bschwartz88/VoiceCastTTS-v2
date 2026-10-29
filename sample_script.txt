@@ -1,0 +1,17 @@
+[Narrator] Late on a stormy evening, three keepers huddled inside the lighthouse control room. Rain pelted the reinforced glass.
+
+[Speaker 1] Check the pressure gauge on the generator. Is it holding at 80%?
+
+[Speaker 2] It's dropping fast. We have maybe 10 min before the backup battery trips.
+
+[Speaker 3] Don't panic! I found the spare emergency fuses in the workshop!
+
+[Narrator] The first keeper stepped up to the main console, scanning the warning lights.
+
+[Speaker 1] We don't need 10 min. We just need 2 min of power to send the navigation beacon.
+
+[Speaker 2] All right, plug in the fuse. I'll switch over to manual feed.
+
+[Speaker 3] Fuse is set! Power is coming back online!
+
+[Narrator] With a heavy clunk, the switch clicked into place, and the great light began to spin once more.

@@ -1,0 +1,26 @@
+[
+  {
+    "component": "flatbuffers-25.12.19",
+    "url": "https://raw.githubusercontent.com/google/flatbuffers/v25.12.19/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "saved_as": "THIRD_PARTY_NOTICES/flatbuffers-25.12.19/UPSTREAM-LICENSE.txt",
+    "exact_tag_reference": true,
+    "binary_correspondence_verified": false
+  },
+  {
+    "component": "espeakng-loader-0.2.4",
+    "url": "https://raw.githubusercontent.com/thewh1teagle/espeakng-loader/main/LICENSE",
+    "sha256": "b05c73bb1335b4320ec97edff106b3991c12d0acdc6e899c96f061a15039119f",
+    "saved_as": "THIRD_PARTY_NOTICES/espeakng-loader-0.2.4/UPSTREAM-LOADER-LICENSE.txt",
+    "exact_tag_reference": false,
+    "binary_correspondence_verified": false
+  },
+  {
+    "component": "espeak-ng-1.52.0",
+    "url": "https://raw.githubusercontent.com/espeak-ng/espeak-ng/1.52.0/COPYING",
+    "sha256": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903",
+    "saved_as": "THIRD_PARTY_NOTICES/espeak-ng-1.52.0/UPSTREAM-COPYING.txt",
+    "exact_tag_reference": true,
+    "binary_correspondence_verified": false
+  }
+]

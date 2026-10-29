@@ -1,0 +1,105 @@
+{
+  "default_voices": {
+    "Narrator": {
+      "voice": "bm_fable",
+      "speed": 0.95,
+      "gender": "Storyteller",
+      "description": "Theatrical British storyteller, ideal for fairy tales and narration"
+    },
+    "Speaker 1": {
+      "voice": "af_sky",
+      "speed": 1.05,
+      "gender": "Female",
+      "description": "Light, youthful, clear young character voice"
+    },
+    "Speaker 2": {
+      "voice": "am_puck",
+      "speed": 1.05,
+      "gender": "Male",
+      "description": "Playful, animated, spirited young character voice"
+    },
+    "Speaker 3": {
+      "voice": "am_liam",
+      "speed": 1.0,
+      "gender": "Male",
+      "description": "Youthful, energetic character voice"
+    }
+  },
+  "pacing_seconds": {
+    "dialogue_turn_pause": 0.35,
+    "narrator_transition_pause": 0.65,
+    "same_speaker_sentence_pause": 0.15
+  },
+  "llm_defaults": {
+    "base_url": "http://127.0.0.1:1234",
+    "timeout_seconds": 180,
+    "instructions": {
+      "write": "You write scripts for VoiceCast, a program that reads scripts aloud with a different voice for each speaker. Write vivid, natural spoken English. Put all description and action in the Narrator's lines; characters only say what they speak aloud. Keep each line to one or two sentences. Don't use stage directions other than the delivery cues listed in the request, and no sound effects, emojis, headings or markdown. Give each character a short name and a voice type: Female, Male, Child / Youth or Neutral.",
+      "split": "You prepare existing text for VoiceCast, a program that reads scripts aloud with a different voice for each speaker. Split the text into lines and give each line a speaker. Words spoken by a character go to that character; everything else, including 'he said', goes to the Narrator. Copy every word exactly as written, in the same order. Don't add, remove, change or summarize anything. Give each character a short name taken from the text and a voice type: Female, Male, Child / Youth or Neutral."
+    }
+  },
+  "voice_traits": {
+    "af_bella": {"gender": "female", "age": "adult", "accent": "american", "sounds": ["expressive", "lively", "dramatic"]},
+    "af_sarah": {"gender": "female", "age": "adult", "accent": "american", "sounds": ["authoritative", "crisp", "clear"]},
+    "af_alloy": {"gender": "female", "age": "adult", "accent": "american", "sounds": ["crisp", "clear", "calm"]},
+    "af_aoede": {"gender": "female", "age": "adult", "accent": "american", "sounds": ["expressive", "smooth", "bright"]},
+    "af_jessica": {"gender": "female", "age": "adult", "accent": "american", "sounds": ["casual", "friendly", "bright"]},
+    "af_nicole": {"gender": "female", "age": "adult", "accent": "american", "sounds": ["smooth", "calm", "thoughtful", "soft"]},
+    "af_river": {"gender": "female", "age": "adult", "accent": "american", "sounds": ["smooth", "calm", "casual"]},
+    "am_adam": {"gender": "male", "age": "adult", "accent": "american", "sounds": ["friendly", "casual", "warm"]},
+    "am_michael": {"gender": "male", "age": "adult", "accent": "american", "sounds": ["deep", "authoritative", "calm"]},
+    "am_eric": {"gender": "male", "age": "adult", "accent": "american", "sounds": ["warm", "casual", "friendly"]},
+    "am_onyx": {"gender": "male", "age": "adult", "accent": "american", "sounds": ["deep", "gruff", "dramatic"]},
+    "bf_alice": {"gender": "female", "age": "adult", "accent": "british", "sounds": ["refined", "clear", "formal"]},
+    "bf_isabella": {"gender": "female", "age": "adult", "accent": "british", "sounds": ["formal", "refined", "smooth"]},
+    "bm_daniel": {"gender": "male", "age": "adult", "accent": "british", "sounds": ["crisp", "clear", "casual"]},
+    "bm_lewis": {"gender": "male", "age": "adult", "accent": "british", "sounds": ["thoughtful", "calm", "formal"]},
+    "bm_fable": {"gender": "male", "age": "adult", "accent": "british", "sounds": ["theatrical", "expressive", "warm"]},
+    "bm_george": {"gender": "male", "age": "adult", "accent": "british", "sounds": ["deep", "warm", "calm"]},
+    "af_heart": {"gender": "female", "age": "adult", "accent": "american", "sounds": ["warm", "gentle", "calm"]},
+    "bf_emma": {"gender": "female", "age": "adult", "accent": "british", "sounds": ["refined", "gentle", "clear"]},
+    "bf_lily": {"gender": "female", "age": "adult", "accent": "british", "sounds": ["gentle", "soft", "smooth"]},
+    "am_santa": {"gender": "male", "age": "elder", "accent": "american", "sounds": ["booming", "jolly", "warm"]},
+    "am_fenrir": {"gender": "male", "age": "adult", "accent": "american", "sounds": ["rugged", "gruff", "dramatic"]},
+    "am_echo": {"gender": "male", "age": "adult", "accent": "american", "sounds": ["deep", "magical", "smooth"]},
+    "af_sky": {"gender": "female", "age": "child", "accent": "american", "sounds": ["light", "bright", "clear"]},
+    "am_puck": {"gender": "male", "age": "child", "accent": "american", "sounds": ["playful", "lively"]},
+    "af_kore": {"gender": "female", "age": "child", "accent": "american", "sounds": ["soft", "sweet", "gentle"]},
+    "am_liam": {"gender": "male", "age": "teen", "accent": "american", "sounds": ["bright", "lively"]},
+    "af_nova": {"gender": "female", "age": "teen", "accent": "american", "sounds": ["bright", "lively", "expressive"]}
+  },
+  "available_popular_voices": [
+    {"id": "af_sky", "accent": "American", "gender": "Female", "category": "Children & Youth", "tone": "Light, youthful, clear (ideal for little girls)"},
+    {"id": "am_puck", "accent": "American", "gender": "Male", "category": "Children & Youth", "tone": "Playful, animated, mischievous (ideal for young boys / sprites)"},
+    {"id": "am_liam", "accent": "American", "gender": "Male", "category": "Children & Youth", "tone": "Youthful, bright, quick teenager / boy"},
+    {"id": "af_kore", "accent": "American", "gender": "Female", "category": "Children & Youth", "tone": "Soft, sweet, gentle (ideal for shy young children)"},
+    {"id": "af_nova", "accent": "American", "gender": "Female", "category": "Children & Youth", "tone": "Bright, upbeat, lively, enthusiastic"},
+
+    {"id": "bm_fable", "accent": "British", "gender": "Male", "category": "Storybook & Fairy Tale Narrators", "tone": "Theatrical, captivating fairy-tale storyteller"},
+    {"id": "bm_george", "accent": "British", "gender": "Male", "category": "Storybook & Fairy Tale Narrators", "tone": "Classic rich bedtime audiobook narrator"},
+    {"id": "af_heart", "accent": "American", "gender": "Female", "category": "Storybook & Fairy Tale Narrators", "tone": "Warm, comforting motherly bedtime narrator"},
+    {"id": "bf_emma", "accent": "British", "gender": "Female", "category": "Storybook & Fairy Tale Narrators", "tone": "Refined storytelling (Beatrix Potter style)"},
+    {"id": "bf_lily", "accent": "British", "gender": "Female", "category": "Storybook & Fairy Tale Narrators", "tone": "Gentle, lyrical classic British narration"},
+
+    {"id": "am_santa", "accent": "American", "gender": "Male", "category": "Whimsical & Character Voices", "tone": "Booming, warm, jolly (friendly giant, mentor, Santa)"},
+    {"id": "am_fenrir", "accent": "American", "gender": "Male", "category": "Whimsical & Character Voices", "tone": "Rugged, bold, intense (talking animals, creatures)"},
+    {"id": "am_echo", "accent": "American", "gender": "Male", "category": "Whimsical & Character Voices", "tone": "Resonant, magical announcer tone"},
+
+    {"id": "af_bella", "accent": "American", "gender": "Female", "category": "American Dialogue Voices", "tone": "Expressive, dynamic dialogue"},
+    {"id": "af_sarah", "accent": "American", "gender": "Female", "category": "American Dialogue Voices", "tone": "Professional, grounded, direct"},
+    {"id": "af_alloy", "accent": "American", "gender": "Female", "category": "American Dialogue Voices", "tone": "Crisp, modern, balanced"},
+    {"id": "af_aoede", "accent": "American", "gender": "Female", "category": "American Dialogue Voices", "tone": "Melodic, expressive"},
+    {"id": "af_jessica", "accent": "American", "gender": "Female", "category": "American Dialogue Voices", "tone": "Casual, friendly"},
+    {"id": "af_nicole", "accent": "American", "gender": "Female", "category": "American Dialogue Voices", "tone": "Velvety, calm, thoughtful"},
+    {"id": "af_river", "accent": "American", "gender": "Female", "category": "American Dialogue Voices", "tone": "Smooth, relaxed"},
+    {"id": "am_adam", "accent": "American", "gender": "Male", "category": "American Dialogue Voices", "tone": "Natural, conversational, friendly"},
+    {"id": "am_michael", "accent": "American", "gender": "Male", "category": "American Dialogue Voices", "tone": "Deep, authoritative, calm"},
+    {"id": "am_eric", "accent": "American", "gender": "Male", "category": "American Dialogue Voices", "tone": "Warm, casual, approachable"},
+    {"id": "am_onyx", "accent": "American", "gender": "Male", "category": "American Dialogue Voices", "tone": "Low, gritty, dramatic"},
+
+    {"id": "bf_alice", "accent": "British", "gender": "Female", "category": "British Dialogue Voices", "tone": "Poised, classic British dialogue"},
+    {"id": "bf_isabella", "accent": "British", "gender": "Female", "category": "British Dialogue Voices", "tone": "Formal, elegant, sophisticated"},
+    {"id": "bm_daniel", "accent": "British", "gender": "Male", "category": "British Dialogue Voices", "tone": "Crisp, modern British male"},
+    {"id": "bm_lewis", "accent": "British", "gender": "Male", "category": "British Dialogue Voices", "tone": "Scholarly, thoughtful, measured"}
+  ]
+}
